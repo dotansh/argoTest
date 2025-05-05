@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-site1
-  namespace: default
+  name: nginx-site
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
-      app: nginx-site1
+      app: nginx-site
   template:
     metadata:
       labels:
-        app: nginx-site1
+        app: nginx-site
     spec:
       containers:
         - name: nginx
